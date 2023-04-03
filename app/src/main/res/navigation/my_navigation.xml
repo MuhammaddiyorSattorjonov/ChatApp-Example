@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/authFragment">
+
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="com.example.chatapp.fragments.AuthFragment"
+        android:label="fragment_auth"
+        tools:layout="@layout/fragment_auth" >
+        <action
+            android:id="@+id/action_authFragment_to_viewPager"
+            app:destination="@id/viewPager" />
+    </fragment>
+    <fragment
+        android:id="@+id/usersFragment"
+        android:name="com.example.chatapp.fragments.UsersFragment"
+        android:label="fragment_users"
+        tools:layout="@layout/fragment_users" >
+        <action
+            android:id="@+id/action_usersFragment_to_myMessageFragment"
+            app:destination="@id/myMessageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myMessageFragment"
+        android:name="com.example.chatapp.fragments.MyMessageFragment"
+        android:label="fragment_my_message"
+        tools:layout="@layout/fragment_my_message" />
+    <fragment
+        android:id="@+id/viewPager"
+        android:name="com.example.chatapp.fragments.ViewPager"
+        android:label="fragment_view_pager"
+        tools:layout="@layout/fragment_view_pager" >
+        <action
+            android:id="@+id/action_viewPager_to_usersFragment"
+            app:destination="@id/usersFragment" />
+        <action
+            android:id="@+id/action_viewPager_to_groupsFragment"
+            app:destination="@id/groupsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupsFragment"
+        android:name="com.example.chatapp.fragments.GroupsFragment"
+        android:label="fragment_groups"
+        tools:layout="@layout/fragment_groups" >
+        <action
+            android:id="@+id/action_groupsFragment_to_myMessageFragment"
+            app:destination="@id/myMessageFragment" />
+        <action
+            android:id="@+id/action_groupsFragment_to_groupAdd"
+            app:destination="@id/groupAdd" />
+        <action
+            android:id="@+id/action_groupsFragment_to_messagesGroups"
+            app:destination="@id/messagesGroups" />
+    </fragment>
+    <fragment
+        android:id="@+id/groupAdd"
+        android:name="com.example.chatapp.fragments.GroupAdd"
+        android:label="fragment_group_add"
+        tools:layout="@layout/fragment_group_add" />
+    <fragment
+        android:id="@+id/messagesGroups"
+        android:name="com.example.chatapp.fragments.MessagesGroups"
+        android:label="fragment_messages_groups"
+        tools:layout="@layout/fragment_messages_groups" />
+</navigation>

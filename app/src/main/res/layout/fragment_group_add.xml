@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#174367"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.GroupAdd">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/image"
+        android:layout_width="90dp"
+        app:cardBackgroundColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/layout_name"
+        app:layout_constraintVertical_bias="0.9"
+        android:layout_height="90dp"
+        app:cardCornerRadius="70dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="40dp"
+            android:layout_margin="5dp"
+            android:layout_gravity="center">
+
+            <ImageView
+                android:id="@+id/image_profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/ic_launcher"
+                android:scaleType="centerCrop"/>
+
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layout_name"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:endIconMode="clear_text"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:helperTextTextColor="#323232"
+        >
+
+        <EditText
+            android:id="@+id/name"
+            android:textColor="@color/white"
+            android:inputType="textPersonName"
+            android:paddingEnd="40dp"
+            android:layout_width="match_parent"
+            android:importantForAutofill="no"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.6"
+        android:layout_margin = "10dp"
+        android:id="@+id/btn_save"
+        android:text="Save"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:backgroundTint="@color/white"
+        android:textAllCaps="false"
+        android:textSize="20dp"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
