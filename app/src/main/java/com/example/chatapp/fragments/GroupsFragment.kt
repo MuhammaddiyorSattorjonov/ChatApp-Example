@@ -28,7 +28,7 @@ class GroupsFragment : Fragment(), GroupsAdapter.RvAction {
     ): View? {
         database = FirebaseDatabase.getInstance()
         reference = database.getReference("groups")
-        adapter = GroupsAdapter(rvAction = this)
+        adapter = GroupsAdapter(requireContext(),rvAction = this)
 
         binding.btnAdd.setOnClickListener {
             findNavController().navigate(R.id.groupAdd)
@@ -45,7 +45,7 @@ class GroupsFragment : Fragment(), GroupsAdapter.RvAction {
                         list.add(group)
                     }
                 }
-                val userAdapter = GroupsAdapter(list, object : GroupsAdapter.RvAction {
+                val userAdapter = GroupsAdapter(requireContext(),list, object : GroupsAdapter.RvAction {
                     override fun itemClick(group: Group) {
                         MyData.group  = group.name!!
                         findNavController().navigate(R.id.messagesGroups, bundleOf("keyGroup" to group))

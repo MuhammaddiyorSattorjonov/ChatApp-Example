@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#174367"
+    android:gravity="center"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".fragments.MessagesGroups">
@@ -14,6 +15,12 @@
         android:layout_weight="1"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:id="@+id/rv_message"
+        />
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress"
+        android:visibility="gone"
         />
 
     <LinearLayout
@@ -35,6 +42,13 @@
             android:layout_gravity="center"
             android:id="@+id/btn_send"
             android:src="@drawable/ic_baseline_send_24"
+            />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/btn_image_send"
+            android:src="@drawable/ic_baseline_image_24"
             />
     </LinearLayout>
 

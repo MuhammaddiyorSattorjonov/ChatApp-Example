@@ -39,6 +39,11 @@
                 android:textColor="@color/black"
                 android:text="15.02.23 14:35"/>
 
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/image"
+                />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

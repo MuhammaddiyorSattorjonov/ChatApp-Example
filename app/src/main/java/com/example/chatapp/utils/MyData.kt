@@ -7,4 +7,6 @@ object MyData {
     var fromUser:User? = null
     var toUser:User? = null
     var group  = ""
+    var imagelink:String? = null
+    var groupImage:String? = null
 }
